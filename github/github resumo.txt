@@ -1,0 +1,124 @@
+DOWNLOAD/INSTALAÇÃO GIT - WINDOWS E LINUX
+
+winget install --id Git.Git -e --source winget
+sudo apt install git
+sudo pacman -S git
+
+VERIFICAR VERSÃO INSTALADA DO GIT
+
+git -v
+
+RESUMO - PRIMEIRA CONFIGURAÇÃO DO GIT NO PC
+
+git config --global user.name "usuario"
+git config --global user.email "usuario@gmail.com"
+
+RESUMO - COMANDOS DE CONSULTA/VISUALIZAÇÃO (OPCIONAIS)
+
+git status
+git log --oneline
+git remote -v
+git branch -v
+
+RESUMO - SUBIR PROJETO PARA O GITHUB - PRIMEIRO UPLOAD
+
+git init
+git add .
+git commit -m "Commit Inicial"
+git remote add origin https://github.com/thiago-wallace/calculo_ip.git
+git branch -M main
+git push -u origin main
+
+RESUMO - SUBIR PROJETO PARA O GITHUB - ATUALIZAÇÃO
+
+git add .
+git commit -m "Commit Atualização"
+git push
+
+RESUMO - BAIXAR PROJETO DO GITHUB - PRIMEIRO DOWNLOAD
+
+git clone https://github.com/thiago-wallace/calculo_ip.git
+
+RESUMO - BAIXAR PROJETO DO GITHUB - ATUALIZAÇÂO
+
+git pull
+
+
+DETALHES - PRINCIPAIS COMANDOS E DESCRIÇÂO
+
+# configurar usuário global para todos os projetos
+git config --global user.name "usuario"
+
+# configurar email global para todos os projetos
+git config --global user.email "usuario@gmail.com"
+
+# visualizar configurações de usuário e email
+git config --list
+
+# iniciar Git no diretório do projeto
+git init
+
+# mostra os arquivos, quais serão adicionados para o commit
+git status
+
+# adiciona todos os arquivos para o próximo commit
+git add .
+
+# efetua o commit com uma mensagem
+git commit -m "Commit Inicial"
+
+# efetua o commit com uma mensagem e uma descrição
+git commit -m "Commit Inicial" -m "Descrição"
+
+# efetua o commit, abrindo o editor de texto vim para formular mensagem e descrição
+git commit
+
+# verificar log dos commits efetuados (Mais legível)
+git log --oneline
+
+# verificar um commit específico
+git show [código do commit]
+
+# adicionar o endereço do repositório do GitHub no Git
+git remote add origin https://github.com/thiago-wallace/calculo_ip.git
+
+# consultar o remote
+git remote -v
+
+# nomear a branch como main
+git branch -M main
+
+# consultar o branch
+git branch
+
+# consultar o branch com detalhes
+git branch -v
+
+# subir os arquivos e os commits para o GitHub
+git push -u origin main
+
+# Atualizar os arquivos e os commits para o GitHub 
+git push
+
+# Baixar os arquivos do GitHub - Criando uma pasta com o nome do repositório
+git clone https://github.com/thiago-wallace/calculo_ip.git
+
+# Baixar os arquivos do GitHub - Criando uma pasta e escolhendo o nome
+git clone https://github.com/thiago-wallace/calculo_ip.git Projeto
+
+# Atualizar os arquivos do GitHub
+git pull
+
+# Opcionais
+
+# remover arquivo do próximo commit
+git reset HEAD teste.py
+
+# remover todos os arquivos do próximo commit
+git reset HEAD
+
+# remover o commit efetuado, mas ainda não transmitido para o GitHub
+git reset HEAD~1
+
+# remover um arquivo do GitHub, mas manter no PC
+git rm --cached arquivo.txt

@@ -1,0 +1,53 @@
+# Verificar versão do Python
+python --version
+
+# Criar VM com o nome vm-exemplo
+python -m venv vm-exemplo
+
+# Acessar a VM no Windows
+vm-exemplo\Scripts\activate
+
+# Acessar a VM no Linux
+source vm-exemplo/bin/activate
+
+# Atualizar PIP
+python -m pip install --upgrade pip
+
+# Baixar PyInstaller
+pip install pyinstaller
+
+# Baixar PySide6 e QtDesigner
+pip install pyside6
+
+# Abrir o QtDesigner
+pyside6-designer
+
+# Converter .ui para .py
+pyside6-uic exemplo.ui -o exemplo_ui.py
+
+# Gerar arquivo executável
+pyinstaller --onefile exemplo.py
+
+# Gerar arquivo executável apenas em modo janela, sem console
+pyinstaller --onefile --noconsole exemplo.py
+
+# Gerar arquivo executável sem console, incluíndo o arquivo .ui (Windows)
+pyinstaller --onefile --noconsole --add-data "exemplo.ui;." exemplo.py
+
+# Gerar arquivo executável, incluíndo o arquivo .ui (Linux)
+pyinstaller --onefile --add-data "exemplo.ui:." exemplo.py
+
+# Gerar arquivo executável, especificando o nome do arquivo executável
+pyinstaller exemplo.spec --name "Exemplo"
+
+# Gerar arquivo executável a partir de um arquivo .spec
+pyinstaller exemplo.spec
+
+# Documentação PyInstaller
+https://pyinstaller.org/en/stable/usage.html
+
+# Salvar versão dos pacotes no ambiente da VM
+pip freeze > requisitos.txt
+
+# Salvar versão do Python
+python --version > python-version.txt
