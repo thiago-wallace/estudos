@@ -5,7 +5,7 @@ from pywhatkit import whats
 # tkinter: usado para criar uma message box (mesmo com o app no console)
 from tkinter import messagebox
 
-telefone = '+551142256544'
+telefone = '+5511900000000'
 mensagem = 'teste'
 
 # envia mensagem para o telefone, abrindo o navegador padrão, com o whatsapp web (o mesmo já deve estar escaneado) e envia mensagem para o telefone.
